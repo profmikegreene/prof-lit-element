@@ -1,0 +1,7 @@
+sakai-page-header {
+    --headerColor:red;
+}
+.primary {
+    --headerColor: red;
+    color:red;
+}

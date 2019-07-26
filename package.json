@@ -4,6 +4,7 @@
   "description": "",
   "main": "hello-world.js",
   "dependencies": {
+    "@vaadin/vaadin-checkbox": "^2.2.10",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {},

@@ -6,20 +6,26 @@ class SakaiPageHeader extends LitElement {
 
   static get properties () {
     return {
-      headerContent: { type: String }
+      headercontent: { type: String }
     };
   }
   static get styles () {
     return css`
-      :host {
+      h1 {
         font-size: 3em;
-        color: var(--headerColor, black);
+        // color: var(--headerColor, blue);
       }
     `;
   }
   constructor () {
     super();
-    this.headerContent = 'Loading';
+    this.headercontent = '';
+
+  }
+
+  attributeChangedCallback(name, oldval, newval) {
+    console.log('attribute change: ', name, newval);
+    super.attributeChangedCallback(name, oldval, newval);
   }
   /**
    * Implement `render` to define a template for your element.
@@ -37,7 +43,7 @@ class SakaiPageHeader extends LitElement {
     return html`
       <!-- sakai-page-header template content -->
       <div class="page-header">
-        <h1>${this.headerContent}</h1>
+        <h1>${this.headercontent}</h1>
       </div>
     `;
   }
