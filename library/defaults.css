@@ -1,7 +1,12 @@
 sakai-page-header {
     --headerColor:red;
 }
-.primary {
-    --headerColor: red;
-    color:red;
+sakai-page-header.primary {
+    --headerColor: green;
+}
+.secondary {
+    --headerColor: teal;
+}
+:host {
+    --headerColor: purple;
 }

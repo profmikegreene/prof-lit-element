@@ -1,8 +1,8 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html, css } from 'lit-element';
-
+import './sakai-page-header';
 // Extend the LitElement base class
-class SakaiPageHeader extends LitElement {
+class SakaiPage extends LitElement {
 
   static get properties () {
     return {
@@ -13,7 +13,7 @@ class SakaiPageHeader extends LitElement {
     return css`
       h1 {
         font-size: 3em;
-        color: var(--headerColor, blue);
+        // color: var(--headerColor, blue);
       }
     `;
   }
@@ -42,15 +42,16 @@ class SakaiPageHeader extends LitElement {
      */
     return html`
       <!-- sakai-page-header template content -->
-      <div class="page-header">
-        <h1>${this.headercontent}</h1>
-      </div>
+        <sakai-page-header class="primary" headercontent="Primary header"></sakai-page-header>
+        <sakai-page-header class="secondary" headercontent="Secondary header"></sakai-page-header>
+        <sakai-page-header class="" headercontent="Default header"></sakai-page-header>
     `;
   }
-  // createRenderRoot () {
-  //   // Use the light DOM instead of shadow dom
-  //    return this;
-  // }
+  createRenderRoot () {
+    // Use the light DOM instead of shadow dom
+     return this;
+  }
 }
 // Register the new element with the browser.
-customElements.define('sakai-page-header', SakaiPageHeader);
+customElements.define('sakai-page', SakaiPage);
+
